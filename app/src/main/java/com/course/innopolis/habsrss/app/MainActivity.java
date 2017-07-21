@@ -20,8 +20,19 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Created by Cristina on 21.07.2017.
+ *
+ * Главная Activity приложения, в которой
+ * вызываются загрузка и парсинг статей с habrahabr.ru,
+ * настройка менеджера макета и адаптера RecyclerView
+ * и отображение списка элементов HabrArticle в RecyclerView
+ */
+
 public class MainActivity extends AppCompatActivity implements OnListItemCallback{
-    final String LOG_TAG = "myLogs";
+
+    final static String LOG_TAG = "MainActivityLogs: ";
+
     private static final String URL = "https://habrahabr.ru/rss/hubs/all/";
 
     private RecyclerView mRecyclerView;
@@ -41,7 +52,7 @@ public class MainActivity extends AppCompatActivity implements OnListItemCallbac
     }
 
 
-    // Просмотреть cnfnm. подробнее
+    // Просмотреть статью подробнее
     @Override
     public void onClick(HabrArticle hab) {
 //        Intent intent = new Intent(this, HabDetailsActivity.class);
@@ -84,9 +95,6 @@ public class MainActivity extends AppCompatActivity implements OnListItemCallbac
                 Toast.makeText(MainActivity.this, "Не удалось загрузить статьи", Toast.LENGTH_LONG).show();
                 Log.d(LOG_TAG, "XML error");
             }
-
         }
     }
-
-
 }

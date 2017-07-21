@@ -12,6 +12,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/view_item_margin"
         android:orientation="vertical">
 
         <LinearLayout
@@ -23,12 +24,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_item_margin"
+                android:textColor="@color/colorGreyHabr"
                 android:text="@string/hab_pubDate" />
             <TextView
                 android:id="@+id/had_creator"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/view_item_margin"
+                android:textColor="@color/colorGreyHabr"
                 android:text="@string/hab_creator" />
         </LinearLayout>
 

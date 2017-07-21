@@ -15,11 +15,13 @@ import java.util.List;
 
 /**
  * Created by Cristina on 21.07.2017.
+ *
+ * Класс-парсер для заполнения списка элементов HabrArticle данными из xml-файла
  */
 
 public class HabrXmlParser {
 
-    final static String LOG_TAG = "HabrParserLogs ";
+    final static String LOG_TAG = "HabrXmlParserLogs: ";
 
     public List<HabrArticle> parse(InputStream in) throws XmlPullParserException, IOException {
         try {
@@ -32,7 +34,7 @@ public class HabrXmlParser {
         }
     }
 
-    // Парсим xml файл в список объектов HabrArticle
+    // Парсинг xml-файла в список объектов HabrArticle
     private static List<HabrArticle> readHabrArticleList(XmlPullParser parser) throws XmlPullParserException, IOException {
         List<HabrArticle> habList = new ArrayList();
         HabrArticle hab = null;
@@ -51,10 +53,6 @@ public class HabrXmlParser {
                         case "title":
                             hab.setTitle(parser.nextText());
                             Log.d(LOG_TAG, "title = " + hab.getTitle());
-//                        case "description":
-//                            hab.setDescription(parser.nextText());
-//                            Log.d(LOG_TAG, "description = " + hab.getDescription());
-//                            break;
                             case "description":
                             int token = parser.nextToken();
                             while(token!=XmlPullParser.CDSECT){
@@ -66,8 +64,7 @@ public class HabrXmlParser {
                             break;
                         case "pubDate":
                             String pubDate = parser.nextText();
-                            //hab.setPubDate(pubDate.substring(0, pubDate.length() - 6));
-                            hab.setPubDate(pubDate.substring(0, pubDate.length()));
+                            hab.setPubDate(pubDate.substring(0, pubDate.length() - 4));
                             Log.d(LOG_TAG, "pubDate = " + hab.getPubDate());
                             break;
                         case "dc:creator":

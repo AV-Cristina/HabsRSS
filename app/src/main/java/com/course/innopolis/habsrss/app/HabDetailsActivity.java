@@ -5,6 +5,12 @@ import android.os.Bundle;
 
 import com.course.innopolis.habsrss.R;
 
+/**
+ * Created by Cristina on 21.07.2017.
+ *
+ * Activity, позволяющая просмотреть выбранную статью подробнее
+ */
+
 public class HabDetailsActivity extends AppCompatActivity {
 
     @Override

@@ -3,10 +3,12 @@ package com.course.innopolis.habsrss.models;
 import android.os.Parcel;
 import android.os.Parcelable;
 
-import java.util.List;
 
 /**
  * Created by Cristina on 21.07.2017.
+ *
+ * Класс, описывающий каждую статью с habrahabr.ru,
+ * предоставляющий методы для назначения и считывания значений полей
  */
 
 public class HabrArticle implements Parcelable {
@@ -97,7 +99,7 @@ public class HabrArticle implements Parcelable {
         return categories;
     }
 
-    public void setCategorys(String categories) {
+    public void setCategories(String categories) {
         this.categories = categories;
     }
 }

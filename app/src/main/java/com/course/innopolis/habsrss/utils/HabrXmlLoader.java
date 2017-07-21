@@ -1,6 +1,5 @@
 package com.course.innopolis.habsrss.utils;
 
-
 import com.course.innopolis.habsrss.models.HabrArticle;
 
 import org.xmlpull.v1.XmlPullParserException;
@@ -13,9 +12,12 @@ import java.util.List;
 
 /**
  * Created by Cristina on 21.07.2017.
+ *
+ * Класс для загрузки xml-файла и передачи его парсеру
  */
 
 public class HabrXmlLoader {
+
     private String urlString;
 
     public HabrXmlLoader(String urlString) {
@@ -47,5 +49,4 @@ public class HabrXmlLoader {
         conn.connect();
         return conn.getInputStream();
     }
-
 }

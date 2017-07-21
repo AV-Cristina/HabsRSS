@@ -15,9 +15,12 @@ import java.util.List;
 
 /**
  * Created by Cristina on 21.07.2017.
+ *
+ * Адаптер для вывода списка элементов HabrArticle в RecyclerView
  */
 
 public class HabrAdapter extends RecyclerView.Adapter<HabrAdapter.HabrHolder> {
+
     private List<HabrArticle> mHabsList;
     private LayoutInflater mInflater;
     private OnListItemCallback callback;
@@ -48,6 +51,7 @@ public class HabrAdapter extends RecyclerView.Adapter<HabrAdapter.HabrHolder> {
 
 
     class HabrHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+
         TextView pubDate, creator, title;
         int position;
         HabrArticle current;
