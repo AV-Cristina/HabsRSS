@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Хабрахабр RSS</string>
+    <string name="hab_pubDate">Дата публикации</string>
+    <string name="hab_creator">Автор</string>
+    <string name="hab_category">Категории</string>
+    <string name="hab_title">Заголовок</string>
+</resources>

@@ -1,0 +1,16 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    </style>
+
+
+    <style name="Theme.Material.Habr" parent="AppTheme">
+        <item name="colorPrimary">@color/colorPrimaryHabr</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDarkHabr</item>
+        <item name="colorAccent">@color/colorAccentHabr</item>
+        <!--<item name="colorPrimaryBlue">@color/colorPrimaryBlue</item>-->
+    </style>
+
+
+
+</resources>
